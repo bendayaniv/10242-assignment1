@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1.Interfaces;
+package com.example.common.Interfaces;
 
 public interface Callback_Item {
     void goBack();

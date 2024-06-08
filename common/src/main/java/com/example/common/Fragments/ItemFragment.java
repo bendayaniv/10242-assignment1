@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1.Fragments;
+package com.example.common.Fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.example.a10242_assignment1.Interfaces.Callback_Item;
-import com.example.a10242_assignment1.Models.Item;
-import com.example.a10242_assignment1.R;
+import com.example.common.Interfaces.Callback_Item;
+import com.example.common.Models.Item;
+import com.example.common.R;
 
 public class ItemFragment extends Fragment {
 
@@ -41,7 +41,7 @@ public class ItemFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_item, container, false);
+        View view = inflater.inflate(com.example.common.R.layout.fragment_item, container, false);
 
         initViews(view);
 
@@ -49,13 +49,13 @@ public class ItemFragment extends Fragment {
     }
 
     private void initViews(View view) {
-        goBackButton = view.findViewById(R.id.button_go_back);
-        button_buy = view.findViewById(R.id.button_buy);
-        itemImage = view.findViewById(R.id.item_image);
-        itemName = view.findViewById(R.id.item_name);
-        itemDescription = view.findViewById(R.id.item_description);
-        itemLocation = view.findViewById(R.id.item_location);
-        itemPrice = view.findViewById(R.id.item_price);
+        goBackButton = view.findViewById(com.example.common.R.id.button_go_back);
+        button_buy = view.findViewById(com.example.common.R.id.button_buy);
+        itemImage = view.findViewById(com.example.common.R.id.item_image);
+        itemName = view.findViewById(com.example.common.R.id.item_name);
+        itemDescription = view.findViewById(com.example.common.R.id.item_description);
+        itemLocation = view.findViewById(com.example.common.R.id.item_location);
+        itemPrice = view.findViewById(com.example.common.R.id.item_price);
 
         setItemDetails();
     }

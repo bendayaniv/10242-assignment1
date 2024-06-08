@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1.Adapters;
+package com.example.common.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,9 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
-import com.example.a10242_assignment1.Models.Item;
-import com.example.a10242_assignment1.R;
+import com.example.common.Interfaces.Callback_ItemsListFragment;
+import com.example.common.Models.Item;
+
+import com.example.common.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -37,7 +38,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_item_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(com.example.common.R.layout.fragment_item_card, parent, false);
         return new ItemViewHolder(view);
     }
 
@@ -65,8 +66,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            image = itemView.findViewById(R.id.item_IMG_image);
-            name = itemView.findViewById(R.id.item_LBL_name);
+            image = itemView.findViewById(com.example.common.R.id.item_IMG_image);
+            name = itemView.findViewById(com.example.common.R.id.item_LBL_name);
 
             itemView.setOnClickListener(v -> {
                 if (callback_itemsListFragment != null) {

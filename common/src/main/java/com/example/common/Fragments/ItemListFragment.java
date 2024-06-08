@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1.Fragments;
+package com.example.common.Fragments;
 
 import android.os.Bundle;
 
@@ -12,11 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
-import com.example.a10242_assignment1.Models.Item;
-import com.example.a10242_assignment1.Adapters.ItemAdapter;
-import com.example.a10242_assignment1.R;
-import com.example.a10242_assignment1.Utils.DataManager;
+import com.example.common.Interfaces.Callback_ItemsListFragment;
+import com.example.common.Models.Item;
+import com.example.common.Adapters.ItemAdapter;
+import com.example.common.R;
+import com.example.common.Utils.DataManagerBase;
 
 import java.util.ArrayList;
 
@@ -26,9 +26,14 @@ public class ItemListFragment extends Fragment {
     private RecyclerView fragmentItemsRV;
     private ItemAdapter itemAdapter;
     private Callback_ItemsListFragment callback_itemsListFragment;
+    private DataManagerBase dataManagerBase;
 
     public void setCallbackItemsListFragment(Callback_ItemsListFragment callback_itemsListFragment) {
         this.callback_itemsListFragment = callback_itemsListFragment;
+    }
+
+    public void setDataManagerBase(DataManagerBase dataManagerBase) {
+        this.dataManagerBase = dataManagerBase;
     }
 
 
@@ -46,7 +51,7 @@ public class ItemListFragment extends Fragment {
     }
 
     private void findViews(View view) {
-        items = DataManager.getItems();
+        items = dataManagerBase.getItems();
 
         itemAdapter = new ItemAdapter(getContext(), items);
         itemAdapter.setCallbackItemsListFragment(callback_itemsListFragment);
