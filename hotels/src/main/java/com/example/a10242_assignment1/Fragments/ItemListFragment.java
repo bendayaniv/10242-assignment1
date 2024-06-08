@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1;
+package com.example.a10242_assignment1.Fragments;
 
 import android.os.Bundle;
 
@@ -12,6 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
+import com.example.a10242_assignment1.Models.Item;
+import com.example.a10242_assignment1.Adapters.ItemAdapter;
+import com.example.a10242_assignment1.R;
+
 import java.util.ArrayList;
 
 public class ItemListFragment extends Fragment {
@@ -19,6 +24,11 @@ public class ItemListFragment extends Fragment {
     ArrayList<Item> items;
     private RecyclerView fragmentItemsRV;
     private ItemAdapter itemAdapter;
+    private Callback_ItemsListFragment callback_itemsListFragment;
+
+    public void setCallbackItemsListFragment(Callback_ItemsListFragment callback_itemsListFragment) {
+        this.callback_itemsListFragment = callback_itemsListFragment;
+    }
 
 
     @Override
@@ -38,6 +48,7 @@ public class ItemListFragment extends Fragment {
         hardCodedItems();
 
         itemAdapter = new ItemAdapter(getContext(), items);
+        itemAdapter.setCallbackItemsListFragment(callback_itemsListFragment);
 
         fragmentItemsRV = view.findViewById(R.id.fragmentItemsRV);
         fragmentItemsRV.setLayoutManager(new LinearLayoutManager(getContext()));

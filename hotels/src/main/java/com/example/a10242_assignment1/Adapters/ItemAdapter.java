@@ -1,4 +1,4 @@
-package com.example.a10242_assignment1;
+package com.example.a10242_assignment1.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
+import com.example.a10242_assignment1.Models.Item;
+import com.example.a10242_assignment1.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -18,22 +20,23 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     private final Context context;
     private ArrayList<Item> items;
-    private Callback_Item callback_item;
+    private Callback_ItemsListFragment callback_itemsListFragment;
 
     public ItemAdapter(Context context, ArrayList<Item> items) {
         this.context = context;
         this.items = items;
     }
 
-    public void setCallbackItem(Callback_Item callback_item) {
-        this.callback_item = callback_item;
+    public void setCallbackItemsListFragment(Callback_ItemsListFragment callback_itemsListFragment) {
+        this.callback_itemsListFragment = callback_itemsListFragment;
     }
+
 
 
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_item_card, parent, false);
         return new ItemViewHolder(view);
     }
 
@@ -70,8 +73,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             name = itemView.findViewById(R.id.item_LBL_name);
 
             itemView.setOnClickListener(v -> {
-                if (callback_item != null) {
-                    callback_item.itemClicked(items.get(getAdapterPosition()), getAdapterPosition());
+                if (callback_itemsListFragment != null) {
+                    callback_itemsListFragment.goToItemPage(items.get(getAdapterPosition()));
                 }
             });
         }
