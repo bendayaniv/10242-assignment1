@@ -54,7 +54,7 @@ public class ItemFragment extends Fragment {
         itemDescription = view.findViewById(R.id.item_description);
         itemLocation = view.findViewById(R.id.item_location);
         itemPrice = view.findViewById(R.id.item_price);
-
+//
         setItemDetails();
     }
 
