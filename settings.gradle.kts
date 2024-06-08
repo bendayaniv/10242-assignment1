@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "10242-assignment1"
-include(":app")
+include(":hotels")
  
