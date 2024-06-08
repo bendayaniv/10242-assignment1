@@ -1,8 +1,9 @@
-package com.example.a10242_assignment1.Utils;
+package com.example.concerts.Utils;
 
-import com.example.a10242_assignment1.R;
+
 import com.example.common.Models.Item;
 import com.example.common.Utils.DataManagerBase;
+import com.example.concerts.R;
 
 import java.util.ArrayList;
 
