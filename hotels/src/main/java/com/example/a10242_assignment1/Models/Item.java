@@ -5,14 +5,14 @@ import androidx.annotation.NonNull;
 public class Item {
 
     private String name;
-    private String imageUrl;
+    private int image;
     private String description;
     private String location;
     private String price;
 
-    public Item(String name, String imageUrl, String description, String location, String price) {
+    public Item(String name, int image, String description, String location, String price) {
         this.name = name;
-        this.imageUrl = imageUrl;
+        this.image = image;
         this.description = description;
         this.location = location;
         this.price = price;
@@ -27,12 +27,12 @@ public class Item {
         return this;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getImage() {
+        return image;
     }
 
-    public Item setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public Item setImageUrl(int image) {
+        this.image = image;
         return this;
     }
 
@@ -68,7 +68,7 @@ public class Item {
     public String toString() {
         return "Item{" +
                 "name='" + name + '\'' +
-                ", image=" + imageUrl +
+                ", image=" + image +
                 ", description='" + description + '\'' +
                 ", location='" + location + '\'' +
                 ", price='" + price + '\'' +

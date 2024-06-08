@@ -16,6 +16,7 @@ import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
 import com.example.a10242_assignment1.Models.Item;
 import com.example.a10242_assignment1.Adapters.ItemAdapter;
 import com.example.a10242_assignment1.R;
+import com.example.a10242_assignment1.Utils.DataManager;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,7 @@ public class ItemListFragment extends Fragment {
     }
 
     private void findViews(View view) {
-        hardCodedItems();
+        items = DataManager.getItems();
 
         itemAdapter = new ItemAdapter(getContext(), items);
         itemAdapter.setCallbackItemsListFragment(callback_itemsListFragment);
@@ -54,19 +55,6 @@ public class ItemListFragment extends Fragment {
         fragmentItemsRV.setLayoutManager(new LinearLayoutManager(getContext()));
         fragmentItemsRV.setAdapter(itemAdapter);
 
-    }
-
-    private void hardCodedItems() {
-        items.add(new Item("Name 1", "ImageUrl 1", "Description 1", "Location 1", "Price 1"));
-        items.add(new Item("Name 2", "ImageUrl 2", "Description 2", "Location 2", "Price 2"));
-        items.add(new Item("Name 3", "ImageUrl 3", "Description 3", "Location 3", "Price 3"));
-        items.add(new Item("Name 4", "ImageUrl 4", "Description 4", "Location 4", "Price 4"));
-        items.add(new Item("Name 5", "ImageUrl 5", "Description 5", "Location 5", "Price 5"));
-        items.add(new Item("Name 6", "ImageUrl 6", "Description 6", "Location 6", "Price 6"));
-        items.add(new Item("Name 7", "ImageUrl 7", "Description 7", "Location 7", "Price 7"));
-        items.add(new Item("Name 8", "ImageUrl 8", "Description 8", "Location 8", "Price 8"));
-        items.add(new Item("Name 9", "ImageUrl 9", "Description 9", "Location 9", "Price 9"));
-        items.add(new Item("Name 10", "ImageUrl 10", "Description 10", "Location 10", "Price 10"));
     }
 
     @Override

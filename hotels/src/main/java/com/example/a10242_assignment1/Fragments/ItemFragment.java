@@ -1,5 +1,6 @@
 package com.example.a10242_assignment1.Fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.example.a10242_assignment1.Interfaces.Callback_Item;
 import com.example.a10242_assignment1.Models.Item;
 import com.example.a10242_assignment1.R;
@@ -54,10 +56,11 @@ public class ItemFragment extends Fragment {
         itemDescription = view.findViewById(R.id.item_description);
         itemLocation = view.findViewById(R.id.item_location);
         itemPrice = view.findViewById(R.id.item_price);
-//
+
         setItemDetails();
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void setItemDetails() {
         goBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,9 +76,7 @@ public class ItemFragment extends Fragment {
             }
         });
 
-//        Glide.with(getContext()).load(item.getImageUrl()).into(itemImage);
-//        Glide.with(requireContext()).load(item.getImageUrl()).into(itemImage);
-        itemImage.setImageResource(R.drawable.temporary_img);
+        Glide.with(requireContext()).load(item.getImage()).into(itemImage).onLoadFailed(requireContext().getDrawable(R.drawable.temporary_img));
         itemName.setText(item.getName());
         itemDescription.setText(item.getDescription());
         itemLocation.setText(item.getLocation());

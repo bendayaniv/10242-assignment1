@@ -1,5 +1,6 @@
 package com.example.a10242_assignment1.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.a10242_assignment1.Interfaces.Callback_ItemsListFragment;
 import com.example.a10242_assignment1.Models.Item;
 import com.example.a10242_assignment1.R;
@@ -32,7 +34,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     }
 
 
-
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,18 +41,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         return new ItemViewHolder(view);
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         Item item = getItem(position);
         holder.name.setText(item.getName());
 
-//        if(item.getImageUrl() != null) {
-//            Glide.with(context).load(item.getImageUrl()).into(holder.image);
-//        }
-//        else {
-        holder.image.setImageResource(R.drawable.temporary_img);
-//        }
-
+        Glide.with(context).load(item.getImage()).into(holder.image).onLoadFailed(context.getDrawable(R.drawable.temporary_img));
     }
 
     public int getItemCount() {
