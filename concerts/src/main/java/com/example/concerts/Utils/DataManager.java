@@ -11,16 +11,16 @@ public class DataManager extends DataManagerBase {
     @Override
     public ArrayList<Item> getItems()  {
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Name 1", R.drawable.img_1, "Description 1", "Location 1", "Price 1"));
-        items.add(new Item("Name 2", R.drawable.img_2, "Description 2", "Location 2", "Price 2"));
-        items.add(new Item("Name 3", R.drawable.img_3, "Description 3", "Location 3", "Price 3"));
-        items.add(new Item("Name 4", R.drawable.img_4, "Description 4", "Location 4", "Price 4"));
-        items.add(new Item("Name 5", R.drawable.img_5, "Description 5", "Location 5", "Price 5"));
-        items.add(new Item("Name 6", R.drawable.img_6, "Description 6", "Location 6", "Price 6"));
-        items.add(new Item("Name 7", R.drawable.img_7, "Description 7", "Location 7", "Price 7"));
-        items.add(new Item("Name 8", R.drawable.img_8, "Description 8", "Location 8", "Price 8"));
-        items.add(new Item("Name 9", R.drawable.img_9, "Description 9", "Location 9", "Price 9"));
-        items.add(new Item("Name 10", R.drawable.img_10, "Description 10", "Location 10", "Price 10"));
+        items.add(new Item("Concert Name 1", R.drawable.img_1, "Description 1", "Location 1", "Concert Price 1"));
+        items.add(new Item("Concert Name 2", R.drawable.img_2, "Concert Description 2", "Concert Location 2", "Concert Price 2"));
+        items.add(new Item("Concert Name 3", R.drawable.img_3, "Concert Description 3", "Concert Location 3", "Concert Price 3"));
+        items.add(new Item("Concert Name 4", R.drawable.img_4, "Concert Description 4", "Concert Location 4", "Concert Price 4"));
+        items.add(new Item("Concert Name 5", R.drawable.img_5, "Concert Description 5", "Concert Location 5", "Concert Price 5"));
+        items.add(new Item("Concert Name 6", R.drawable.img_6, "Concert Description 6", "Concert Location 6", "Concert Price 6"));
+        items.add(new Item("Concert Name 7", R.drawable.img_7, "Concert Description 7", "Concert Location 7", "Concert Price 7"));
+        items.add(new Item("Concert Name 8", R.drawable.img_8, "Concert Description 8", "Concert Location 8", "Concert Price 8"));
+        items.add(new Item("Concert Name 9", R.drawable.img_9, "Concert Description 9", "Concert Location 9", "Concert Price 9"));
+        items.add(new Item("Concert Name 10", R.drawable.img_10, "Concert Description 10", "Concert Location 10", "Concert Price 10"));
         return items;
     }
 }

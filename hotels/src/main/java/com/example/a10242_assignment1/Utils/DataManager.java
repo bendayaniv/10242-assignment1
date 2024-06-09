@@ -10,16 +10,16 @@ public class DataManager extends DataManagerBase {
     @Override
     public ArrayList<Item> getItems()  {
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Name 1", R.drawable.img_1, "Description 1", "Location 1", "Price 1"));
-        items.add(new Item("Name 2", R.drawable.img_2, "Description 2", "Location 2", "Price 2"));
-        items.add(new Item("Name 3", R.drawable.img_3, "Description 3", "Location 3", "Price 3"));
-        items.add(new Item("Name 4", R.drawable.img_4, "Description 4", "Location 4", "Price 4"));
-        items.add(new Item("Name 5", R.drawable.img_5, "Description 5", "Location 5", "Price 5"));
-        items.add(new Item("Name 6", R.drawable.img_6, "Description 6", "Location 6", "Price 6"));
-        items.add(new Item("Name 7", R.drawable.img_7, "Description 7", "Location 7", "Price 7"));
-        items.add(new Item("Name 8", R.drawable.img_8, "Description 8", "Location 8", "Price 8"));
-        items.add(new Item("Name 9", R.drawable.img_9, "Description 9", "Location 9", "Price 9"));
-        items.add(new Item("Name 10", R.drawable.img_10, "Description 10", "Location 10", "Price 10"));
+        items.add(new Item("Hotel Name 1", R.drawable.img_1, "Hotel Description 1", "Hotel Location 1", "Hotel Price 1"));
+        items.add(new Item("Hotel Name 2", R.drawable.img_2, "Hotel Description 2", "Hotel Location 2", "Hotel Price 2"));
+        items.add(new Item("Hotel Name 3", R.drawable.img_3, "Hotel Description 3", "Hotel Location 3", "Hotel Price 3"));
+        items.add(new Item("Hotel Name 4", R.drawable.img_4, "Hotel Description 4", "Hotel Location 4", "Hotel Price 4"));
+        items.add(new Item("Hotel Name 5", R.drawable.img_5, "Hotel Description 5", "Hotel Location 5", "Hotel Price 5"));
+        items.add(new Item("Hotel Name 6", R.drawable.img_6, "Hotel Description 6", "Hotel Location 6", "Hotel Price 6"));
+        items.add(new Item("Hotel Name 7", R.drawable.img_7, "Hotel Description 7", "Hotel Location 7", "Hotel Price 7"));
+        items.add(new Item("Hotel Name 8", R.drawable.img_8, "Hotel Description 8", "Hotel Location 8", "Hotel Price 8"));
+        items.add(new Item("Hotel Name 9", R.drawable.img_9, "Hotel Description 9", "Hotel Location 9", "Hotel Price 9"));
+        items.add(new Item("Hotel Name 10", R.drawable.img_10, "Hotel Description 10", "Hotel Location 10", "Hotel Price 10"));
         return items;
     }
 }
